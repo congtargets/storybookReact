@@ -6,7 +6,7 @@
 .history
 # testing
 /coverage
-
+*.zip
 # production
 /build
 
