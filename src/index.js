@@ -2,43 +2,35 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import Clock from "./views/clock";
 import reportWebVitals from "./reportWebVitals";
 
-import { createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
-import { Provider } from "react-redux";
-import { createLogger } from "redux-logger";
-import { thunk } from "redux-thunk";
+// import { createStore, applyMiddleware } from "redux";
+// import { composeWithDevTools } from "redux-devtools-extension";
+// import { Provider } from "react-redux";
+// import { createLogger } from "redux-logger";
+// // import { thunk } from "redux-thunk";
+// const {thunkMiddleware} = require('redux-thunk');
 
-const initialState = {
-  usingRedux: true,
-};
+// const initialState = {
+//   usingRedux: true,
+// };
 
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "save":
-      return { ...state, ...action.payload };
-    default:
-      return state;
-  }
-};
-const middleware = [thunk];
-console.log("middleware");
-console.log(middleware);
-console.log("process");
-console.log(process);
-if (process.env.NODE_ENV !== "production") {
-  middleware.push(createlogger());
-}
+// const reducer = (state = initialState, action) => {
+//   switch (action.type) {
+//     case "save":
+//       return { ...state, ...action.payload };
+//     default:
+//       return state;
+//   }
+// };
 
-const store = createStore(
-  reducer,
-  composeWithDevTools(applyMiddleware(...middleware))
-);
+// exports.configureStore = function(initialState){
+// const store = createStore(order,initialState,applyMiddleware(thunkMiddleware));
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Clock />
   </React.StrictMode>,
   document.getElementById("root")
 );
