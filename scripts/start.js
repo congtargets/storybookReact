@@ -1,4 +1,4 @@
-'use strict';
+
 
 // Do this as the first thing so that any code reading it knows the right env.
 process.env.BABEL_ENV = 'development';
@@ -16,9 +16,13 @@ require('../config/env');
 
 
 const fs = require('fs');
+console.log('fs');
+console.log(fs);
 const chalk = require('react-dev-utils/chalk');
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
+console.log('WebpackDevServer');
+console.log(WebpackDevServer);
 const clearConsole = require('react-dev-utils/clearConsole');
 const checkRequiredFiles = require('react-dev-utils/checkRequiredFiles');
 const {
@@ -27,12 +31,26 @@ const {
   prepareProxy,
   prepareUrls,
 } = require('react-dev-utils/WebpackDevServerUtils');
+console.log('prepareUrls');
+console.log(prepareUrls);
+console.log('prepareProxy');
+console.log(prepareProxy);
 const openBrowser = require('react-dev-utils/openBrowser');
 const semver = require('semver');
+console.log('semver');
+console.log(semver);
 const paths = require('../config/paths');
+console.log('paths');
+console.log(paths);
 const configFactory = require('../config/webpack.config');
+console.log('configFactory');
+console.log(configFactory);
 const createDevServerConfig = require('../config/webpackDevServer.config');
+console.log('createDevServerConfig');
+console.log(createDevServerConfig);
 const getClientEnvironment = require('../config/env');
+console.log('getClientEnvironment');
+console.log(getClientEnvironment);
 const react = require(require.resolve('react', { paths: [paths.appPath] }));
 
 const env = getClientEnvironment(paths.publicUrlOrPath.slice(0, -1));

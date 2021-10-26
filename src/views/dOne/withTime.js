@@ -15,6 +15,8 @@ export default function withTimer(WrappedComponent){
             })
         }
         render(){
+            console.log('this.props');
+            console.log(this.props);
             return <wrappedComponent time={this.state.time}{...this.props}/>;
         }
 
