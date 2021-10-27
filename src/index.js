@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import Clock from "./views/dOne/clock";
+import ChatApp from "./views/dOne/chatapp";
 import reportWebVitals from "./reportWebVitals";
 
 // import { createStore, applyMiddleware } from "redux";
@@ -30,7 +31,7 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Clock />
+    <ChatApp />
   </React.StrictMode>,
   document.getElementById("root")
 );
