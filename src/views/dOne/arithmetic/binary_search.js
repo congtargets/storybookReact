@@ -1,6 +1,7 @@
 /*
 list必须是有序数组
 */
+
 function binary_search(list, item) {
   let start = 0;
   let end = list.length - 1;
@@ -28,5 +29,6 @@ function binary_search(list, item) {
 }
 // let myList = [9, 7, 5, 3, 1];  //反向用
 let myList = [1, 3, 5, 7, 9];
-
+console.time("timer");
 binary_search(myList, 3);
+console.timeEnd("timer");
