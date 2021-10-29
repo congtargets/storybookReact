@@ -1,4 +1,5 @@
 import React from "react";
+import withTimer from "./withTime"
 class MessageList extends React.PureComponent {
   render() {
     return (
@@ -11,7 +12,7 @@ class MessageList extends React.PureComponent {
   }
 }
 
-export default class ChatApp extends React.Component {
+export class ChatApp extends React.Component {
   state = {
     message: [],
     inputMsg: "",
@@ -40,7 +41,10 @@ export default class ChatApp extends React.Component {
           <input value={this.state.inputMsg} />
           <button onClick={this.handleSend}>Send</button>
         </div>
+        <p2>{this.props.time.toLocaleString()}</p2>
       </div>
     );
   }
 }
+
+export default withTimer(ChatApp);
