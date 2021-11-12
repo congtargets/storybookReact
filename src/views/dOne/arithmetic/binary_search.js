@@ -2,33 +2,32 @@
 list必须是有序数组
 */
 
-function binary_search(list, item) {
+var searchInsert = function (list, item) {
   let start = 0;
   let end = list.length - 1;
-  function binary() {
-    if (start <= end) {
-      let mid = Math.floor((start + end) / 2);
-      let guess = list[mid];
+
+  while (start <= end) {
+    var mid = Math.floor((start + end) / 2);
+    var guess = list[mid];
+    console.log(mid, "aaa");
+    if (guess === item) {
       console.log(mid);
-      console.log(guess);
-      if (guess === item) {
-        console.log("----------");
-        console.log(mid);
-      } else if (guess > item) {
-        //   } else if (guess < item) {  //反向用
-        end = mid - 1;
-        binary();
-      } else {
-        start = mid + 1;
-        binary();
-      }
-      console.log(null);
+      return mid;
+    } else if (guess > item) {
+      end = mid - 1;
+      console.log("one");
+    } else if (guess < item) {
+      start = mid + 1;
+      console.log("two");
+    } else {
+      console.log(mid);
+      return mid;
     }
+    console.log("three");
   }
-  binary();
-}
+};
 // let myList = [9, 7, 5, 3, 1];  //反向用
-let myList = [1, 3, 5, 7, 9];
+let myList = [1, 3, 5, 6];
 console.time("timer");
-binary_search(myList, 3);
+searchInsert(myList, 6);
 console.timeEnd("timer");
