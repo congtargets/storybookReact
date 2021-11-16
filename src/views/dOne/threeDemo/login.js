@@ -2,7 +2,7 @@ import React from "react";
 import * as Three from "three";
 import { Scene } from "three";
 
-export default class ThreeLogin extends React.Compontent {
+export default class ThreeLogin extends React.Component {
   camera = null;
   scene = null;
   renderer = null;
