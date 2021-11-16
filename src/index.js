@@ -5,6 +5,7 @@ import App from "./App";
 import Clock from "./views/dOne/clock";
 import ChatApp from "./views/dOne/chatapp";
 import ChatAppTwo from "./views/dOne/chatappTwo";
+import ThreeLoginTwo from "./views/dOne/threeDemo/threeLogin";
 import ThreeLogin from "./views/dOne/threeDemo/login";
 import reportWebVitals from "./reportWebVitals";
 
@@ -33,8 +34,9 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChatAppTwo />
+    {/* <ChatAppTwo /> */}
     <ThreeLogin />
+    <ThreeLoginTwo />
   </React.StrictMode>,
   document.getElementById("root")
 );
