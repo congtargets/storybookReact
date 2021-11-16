@@ -5,6 +5,7 @@ import App from "./App";
 import Clock from "./views/dOne/clock";
 import ChatApp from "./views/dOne/chatapp";
 import ChatAppTwo from "./views/dOne/chatappTwo";
+import ThreeLogin from "./views/dOne/threeDemo/login";
 import reportWebVitals from "./reportWebVitals";
 
 // import { createStore, applyMiddleware } from "redux";
@@ -33,6 +34,7 @@ import reportWebVitals from "./reportWebVitals";
 ReactDOM.render(
   <React.StrictMode>
     <ChatAppTwo />
+    <ThreeLogin />
   </React.StrictMode>,
   document.getElementById("root")
 );
