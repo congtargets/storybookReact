@@ -35,7 +35,7 @@ import reportWebVitals from "./reportWebVitals";
 ReactDOM.render(
   <React.StrictMode>
     {/* <ChatAppTwo /> */}
-    <ThreeLogin />
+    {/* <ThreeLogin /> */}
     <ThreeLoginTwo />
   </React.StrictMode>,
   document.getElementById("root")
