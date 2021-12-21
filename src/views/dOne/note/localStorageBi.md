@@ -83,7 +83,7 @@ if(!window.localStorage){
 }
 
 删除
-1：将localStorage的所有内容清楚
+1：将localStorage的所有内容清除
 var storage=window.localStorage;
 storage.a=1;
 storage.setItem("c",3);
@@ -95,4 +95,21 @@ localStorage键的获取
 
 var storage=window.localStorage;
 storage.a=1;
-storage.setIte,
+storage.setItem("c",3);
+for(let i=0;i<storage.length;i++){
+    cosnole.log(storage.key(i));// 使用key方法，向其中出入索引即可获取对应的键
+}
+
+localStorage其他注意事项
+一般我们会将JSON存入localStroage中，但是在localStorage会自动将localStorage转换成为字符串形式。
+这个时候我们可以使用JSON.stringfy()这个方法，来将JSON转换成为JSON字符串。
+if(!window.localStorage){
+    alert("浏览器不支持localstorage");
+}else{
+    var storage=window.localStorage;
+    var data={
+        name:'xiecanyong',
+        sex:'man',
+        hobby:'program',
+    }
+}
