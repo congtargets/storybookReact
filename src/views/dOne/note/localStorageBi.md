@@ -111,5 +111,24 @@ if(!window.localStorage){
         name:'xiecanyong',
         sex:'man',
         hobby:'program',
+    };
+    var d=JSON.stringfy(data);
+    storage.setItem("data",d);
+    //将json字符串转换成json对象输出
+    var json=storage.getItem("data");
+    var jsonObj=JSON.parse(json);
+    console.log(typeof jsonObj);// object
+    打印出来的是Object对象，其他类型读取出来也要进行转换
+
+    localstorage存储json格式的方法比较简单，例如
+    var data = {
+        test:"text",
+        test1:"123456",
+        test2:"字段值",
     }
+    存储方式如下，将json转换为字符串在存入
+    localStorage.setItem("data",JSON.stringfy(data));
+    使用方法如下
+    var data=localStorage.getItem("data");
+    data=JSON.parse(data);
 }
