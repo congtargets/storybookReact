@@ -17,7 +17,7 @@ function fn4(): string {
 //函数表达式的双向限定
 //上述fn1 其实只对=右侧做了限制，对左侧并没有
 //完善一点，可以这样=> 用来表示函数的定义，左输入类型，需要用括号括起来，右输出类型
-const fn1: (param1: string, param2: number) => void = (){
+const fn11: (param1: string, param2: number) => void = (){
     
 }
 //函数的可选参数
